@@ -102,7 +102,12 @@ function App() {
           </div>
 
           <div className="order-section">
-            <h2>Place an Order</h2>
+
+          <div className="order-button-container">
+            <div className="spacer"></div>
+            <h2 className="order-text-button" onClick={placeOrder}>Place an Order</h2>
+          <div className="spacer"></div>
+          </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <select value={selectedProduct} onChange={e => setSelectedProduct(e.target.value)}>
               <option value="">Select a product</option>
@@ -124,7 +129,6 @@ function App() {
               onChange={e => setQuantity(e.target.value)} 
               min="1" 
             />
-            <button className="order-button" onClick={placeOrder}>Order</button>
           </div>
         </>
       ) : (

@@ -44,22 +44,6 @@ h1 {
   text-align: center;
 }
 
-button {
-  padding: 10px 15px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.2s;
-}
-
-.error-message {
-  color: red;
-  font-weight: bold;
-}
-
 button:hover {
   background-color: #0056b3;
 }
@@ -73,18 +57,29 @@ button:hover {
   opacity: 0;
 }
 
-.order-button {
-  background-color: black;  /* Black background */
-  color: white;             /* White text */
-  border: none;             /* Remove any default borders */
-  padding: 10px 20px;       /* Add some padding for aesthetics */
+.order-text-button {
+  padding: 15px 20px;       /* Add padding to give it a button-like size */
   cursor: pointer;          /* Make it evident it's clickable */
-  transition: 0.3s ease;    /* Optional: smooth transition for hover effect */
+  color: black;             /* White text */
+  background-color: white;  /* Black background */
+  border: 1px solid black;  /* Border to make it stand out */
+  transition: 0.3s ease;    /* Smooth transition for hover effect */
+  text-align: center;       /* Center align the text */
+}
 
-  /* Optional: Slightly reduce the opacity on hover for a subtle effect */
-  &:hover {
-      opacity: 0.9;
-  }
+.order-text-button:hover {
+  background-color: rgb(235, 233, 233);   /* Change background color on hover */
+  transform: scale(1.1);    /* Scale the button up to make it pop on hover */
+}
+
+.order-button-container {
+  display: flex;           /* Use flexbox for layout */
+  justify-content: center; /* Horizontally center the button */
+  align-items: center;     /* Vertically center (if needed) */
+}
+
+.spacer {
+  flex: 1;                 /* Take up equal space on both sides of the button */
 }
 
 .order-inputs {
